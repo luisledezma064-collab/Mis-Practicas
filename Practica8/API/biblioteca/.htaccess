@@ -1,0 +1,5 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+
+# Ejemplo: libros/titulo/lista -> libros.php?peticion=titulo&detalle=lista
+RewriteRule ^([^/]+)/([^/]+)$ libros.php?peticion=$1&detalle=$2 [L,QSA]

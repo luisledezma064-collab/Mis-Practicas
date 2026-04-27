@@ -1,0 +1,5 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+
+# Convierte biblioteca/autor/lista -> libros.php?peticion=autor&detalle=lista
+RewriteRule ^([^/]+)/([^/]+)$ libros.php?peticion=$1&detalle=$2 [L,QSA]
